@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import ttk
 
 class User():
     id = NONE
@@ -26,13 +25,13 @@ class Window():
         return root    
 
     def initialMessageDiv(self, root):
-        frameTextEditor = ttk.Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
+        frameTextEditor = Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
         self.initialMessageTextEditor(frameTextEditor)
         self.initialMessageButton(frameTextEditor)
         frameTextEditor.place(anchor="se", relx=1, rely=1, width=470, height=150)
 
     def initialMessageButton(self, frame):
-        btn = ttk.Button(frame, text="Отправить", command=self.sendMessage)
+        btn = Button(frame, text="Отправить", command=self.sendMessage)
         btn.pack(anchor="se", pady=[10, 0])
 
     def initialMessageTextEditor(self, frame):
@@ -40,15 +39,15 @@ class Window():
         editor.pack(anchor="se")
 
     def initialCurrentRoom(self, root):
-        frameRoom = ttk.Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
+        frameRoom = Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
         frameRoom.place(anchor="ne", relx=1, rely=0, width=470, height=750)
 
     def initialRoomList(self, root):
-        frameRoom = ttk.Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
+        frameRoom = Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
         frameRoom.place(anchor="nw", relx=0, rely=0, width=230, height=750)
 
     def initialOption(self, root):
-        frameRoom = ttk.Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
+        frameRoom = Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
         frameRoom.place(anchor="sw", relx=0, rely=1, width=230, height=150)
         
     def sendMessage(self):

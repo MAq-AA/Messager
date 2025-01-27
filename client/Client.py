@@ -1,4 +1,4 @@
-from client.window import *
+from client.Window import *
 
 def main():
     client = Window()

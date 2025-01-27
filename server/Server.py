@@ -1,4 +1,4 @@
-from server.db_sqllite import *
+from server.SQLiteDB import *
 
 def main():
     initialSQLite3DB()
