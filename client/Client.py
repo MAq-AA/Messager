@@ -1,5 +1,14 @@
-from client.Window import *
+from .Window import Window 
+from .EntryWin import EntryWin
 
-def main():
+def main(): 
+    entryWin = EntryWin()
     client = Window()
-    client.initialWindow()
+    while True:
+        do_entry = entryWin.succesful_entry
+        if not do_entry:
+            entryWin.initialAll()
+            entryWin.root.wait_window()
+        if do_entry:  
+            client.initialWindow()
+          

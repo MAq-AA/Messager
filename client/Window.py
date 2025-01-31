@@ -1,31 +1,28 @@
 from tkinter import *
+from tkinter import Toplevel
 
-class User():
-    id = NONE
-    permission = {
-        "user": 1,
-        "moder": 0,
-        "superUser": 0
-    }
+class Window(Toplevel): 
+    def __init__(self):
+        self.root = Tk()
+        self.root.withdraw()
 
-class Window(): 
     def initialWindow(self):
-        root = self.initialRoot()
-        self.initialMessageDiv(root)
-        self.initialCurrentRoom(root)
-        self.initialRoomList(root)
-        self.initialOption(root)
-        root.mainloop()
+        self.root = self.initialRoot()
+        self.initialMessageDiv(self.root)
+        self.initialCurrentRoom(self.root)
+        self.initialRoomList(self.root)
+        self.initialOption(self.root)
+        self.root.mainloop()
 
     def initialRoot(self):
-        root = Tk()
-        root.minsize(700, 900)
-        root.maxsize(700, 900)
-        root.title("MESSENGER")
-        return root    
+        self.root = Tk()
+        self.root.minsize(700, 900)
+        self.root.maxsize(700, 900)
+        self.root.title("MESSENGER")
+        return self.root    
 
     def initialMessageDiv(self, root):
-        frameTextEditor = Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
+        frameTextEditor = Frame(root, borderwidth=1, relief=SOLID, padx=8, pady=10)
         self.initialMessageTextEditor(frameTextEditor)
         self.initialMessageButton(frameTextEditor)
         frameTextEditor.place(anchor="se", relx=1, rely=1, width=470, height=150)
@@ -39,15 +36,15 @@ class Window():
         editor.pack(anchor="se")
 
     def initialCurrentRoom(self, root):
-        frameRoom = Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
+        frameRoom = Frame(root, borderwidth=1, relief=SOLID, padx=8, pady=10)
         frameRoom.place(anchor="ne", relx=1, rely=0, width=470, height=750)
 
     def initialRoomList(self, root):
-        frameRoom = Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
+        frameRoom = Frame(root, borderwidth=1, relief=SOLID, padx=8, pady=10)
         frameRoom.place(anchor="nw", relx=0, rely=0, width=230, height=750)
 
     def initialOption(self, root):
-        frameRoom = Frame(root, borderwidth=1, relief=SOLID, padding=[8, 10])
+        frameRoom = Frame(root, borderwidth=1, relief=SOLID, padx=8, pady=10)
         frameRoom.place(anchor="sw", relx=0, rely=1, width=230, height=150)
         
     def sendMessage(self):

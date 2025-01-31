@@ -1,8 +1,10 @@
 import bcrypt
- 
+
+global salt 
+salt = '$2b$12$cBQ2MOmKZbDrXkEvmiI5Ne'
 
 class Password():
-    def __init__(self, salt = '$2b$12$cBQ2MOmKZbDrXkEvmiI5Ne'):
+    def __init__(self):
         self.salt = salt.encode('utf-8')
     
     def getHash(self, password):

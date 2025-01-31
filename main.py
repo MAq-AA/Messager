@@ -1,5 +1,5 @@
-import client.Client as client
+import client.Client as Client
 import server.Server as Server
 
 Server.main()
-client.main()
+Client.main()
