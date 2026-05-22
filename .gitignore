@@ -1,0 +1,73 @@
+### Python ###
+# Байт-код
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Среда разработки (virtualenv)
+venv/
+.env/
+.venv/
+env/
+
+# Установленные пакеты
+*.egg-info/
+*.egg
+dist/
+build/
+pip-wheel-metadata/
+
+# Тестирование и покрытие
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+### IDE ###
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# PyCharm
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-*
+
+### Системные файлы ###
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+### Конфиги и секреты ###
+# Файлы окружения
+.env
+.env.local
+.env.*.local
+
+# Конфиги с чувствительными данными
+config.ini
+secrets.py
+credentials.json
+
+# Логи
+*.log
+logs/
+
+### Прочее ###
+# Файлы кэша
+.cache/
+
+# Автогенерируемые файлы
+*.sqlite3
+*.db
